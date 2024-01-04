@@ -1,17 +1,21 @@
 package ru.gb;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        List<Person> helloween = new ArrayList<>();
+        helloween.add(new Person("Daniel", "Löble", 1973));
+        helloween.add(new Person("Sascha", "Gerstner", 1977));
+        helloween.add(new Person("Andi", "Deris", 1964));
+        helloween.add(new Person("Michael", "Kiske", 1968));
+        helloween.add(new Person("Kai", "Hansen", 1963));
+        helloween.add(new Person("Markus", "Grosskopf", 1965));
+        helloween.add(new Person("Michael", "Weikath", 1962));
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        for (Person person : helloween) {
+            System.out.println(person);
         }
     }
 }
