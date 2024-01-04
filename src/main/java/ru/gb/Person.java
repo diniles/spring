@@ -3,12 +3,12 @@ package ru.gb;
 public class Person {
     private final String firstName;
     private final String lastName;
-    private final int age;
+    private final int dateOfBirth;
 
-    public Person(String firstName, String lastName, int age) {
+    public Person(String firstName, String lastName, int dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getFirstName() {
@@ -19,16 +19,12 @@ public class Person {
         return lastName;
     }
 
-    public int getAge() {
-        return age;
+    public int getDateOfBirth() {
+        return dateOfBirth;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                '}';
+        return firstName + " " + lastName + " was born in " + dateOfBirth;
     }
 }
